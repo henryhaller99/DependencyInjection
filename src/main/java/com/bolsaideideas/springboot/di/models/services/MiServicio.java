@@ -1,10 +1,15 @@
 package com.bolsaideideas.springboot.di.models.services;
 
+import org.springframework.stereotype.Service;
 
 // interactua con los DAO, o se comunican con las APIs REST para obtener los datos de algún otro microservicio
-public class MiServicio {
+@Service("miServicioSimple")
+public class MiServicio implements IMiServicio {
 
+	@Override
 	public String operacion() {
-		return "se está ejecutando alguna operación importante....";
+		return "ejecutando alguna operación importante";
 	}
+
+
 }
